@@ -89,7 +89,7 @@ const HomeScreen = ({ navigation }) => {
         <View style={styles.section}>
           <View style={styles.sectionHeader}>
             <Text style={styles.sectionTitle}>Recent Tasks</Text>
-            <TouchableOpacity onPress={() => navigation.navigate('TasksTab')}>
+            <TouchableOpacity onPress={() => navigation.navigate('Tasks')}>
               <Text style={styles.seeAllText}>See All</Text>
             </TouchableOpacity>
           </View>
@@ -101,7 +101,7 @@ const HomeScreen = ({ navigation }) => {
                 task={task}
                 onToggle={toggleTaskCompletion}
                 onEdit={() =>
-                  navigation.navigate('TasksTab', {
+                  navigation.navigate('Tasks', {
                     screen: 'TaskForm',
                     params: { task },
                   })
@@ -119,7 +119,7 @@ const HomeScreen = ({ navigation }) => {
               <TouchableOpacity
                 style={styles.addFirstButton}
                 onPress={() =>
-                  navigation.navigate('TasksTab', { screen: 'TaskForm' })
+                  navigation.navigate('Tasks', { screen: 'TaskForm' })
                 }
               >
                 <Text style={styles.addFirstButtonText}>
